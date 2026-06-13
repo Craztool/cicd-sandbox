@@ -1,0 +1,10 @@
+name: CI
+
+on: [push]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Поздароваться
+        run:  echo "Мой первый pipeline работает!"
