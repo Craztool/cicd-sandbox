@@ -6,5 +6,6 @@ jobs:
   bez-checkout:
    runs-on: ubuntu-latest
    steps:
+     - uses: actions/checkout@v4
      - name: Попробывать прочитать свои файлы
        run: ls -la && cat README.md
