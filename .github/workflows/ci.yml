@@ -3,8 +3,8 @@ name: CI
 on: [push]
 
 jobs:
-  hello:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Поздароваться
-        run:  echo "Мой первый pipeline работает!"
+  bez-checkout:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Попробывать прочитать свои файлы
+       run: ls -la && cat README.md
