@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: sandbox-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: sandbox-app
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: web-server
-        image: ghcr.io/craztool/cicd-sandbox:cc60ffd6e12d179b975609d74f72ac2687082ba0
+        image: ghcr.io/craztool/cicd-sandbox:d4375f5b0052a9f342ae9771acbfd639a01ca1e1
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
