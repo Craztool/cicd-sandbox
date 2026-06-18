@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: ghcr.io/craztool/cicd-sandbox
-  tag: "d4375f5b0052a9f342ae9771acbfd639a01ca1e1" # Базовый хэш, который будет обновлять GitHub Actions
+  tag: "dd87ce1cf7f83f3d27fe86b0a268b746151f456b" # Базовый хэш, который будет обновлять GitHub Actions
   pullPolicy: Always
 
 service:
