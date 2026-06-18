@@ -1,0 +1,6 @@
+replicaCount: 5
+
+ingress:
+  enabled: true
+  className: nginx
+  host: prod.sandbox.local

@@ -1,0 +1,16 @@
+replicaCount: 2
+
+image:
+  repository: ghcr.io/craztool/cicd-sandbox
+  tag: "d4375f5b0052a9f342ae9771acbfd639a01ca1e1" # Базовый хэш, который будет обновлять GitHub Actions
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8000
+
+ingress:
+  enabled: true
+  className: nginx
+  host: sandbox.local
