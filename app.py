@@ -19,4 +19,3 @@ if __name__ == "__main__":
     print(f"Сервер запущен на порту {port}")
     server = HTTPServer(("", port), SimpleServer)
     server.serve_forever()
-
