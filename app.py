@@ -9,7 +9,7 @@ class SimpleServer(BaseHTTPRequestHandler):
         self.end_headers()
         html = (
             "<html><body><h1>Привет от CI/CD Sandbox V2!</h1>"
-            "<p>Part2</p></body></html>"
+            "<p>ArgoCD управляет миром!</p></body></html>"
         )
         self.wfile.write(html.encode('utf-8'))
 

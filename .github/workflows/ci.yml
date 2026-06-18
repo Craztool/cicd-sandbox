@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [lint, test]
     permissions:
-      contents: read
+      contents: write
       packages: write
     steps:
       - uses: actions/checkout@v4
@@ -43,3 +43,11 @@ jobs:
           tags: |
             ghcr.io/craztool/cicd-sandbox:latest
             ghcr.io/craztool/cicd-sandbox:${{ github.sha }}
+      - name: Update Helm values.yaml (GitOps)
+        run: |
+          sed -i 's|tag: ".*"|tag: "${{ github.sha }}"|' helm/values.yaml
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add helm/values.yaml
+          git commit -m "chore: update image tag [skip ci]"
+          git push
